@@ -1,0 +1,70 @@
+[
+    {
+        "id": "1",
+        "name": "Action"
+    },
+    {
+        "id": "2",
+        "name": "RPG"
+    },
+    {
+        "id": "3",
+        "name": "Course"
+    },
+    {
+        "id": "4",
+        "name": "Stratégie"
+    },
+    {
+        "id": "5",
+        "name": "Tactique"
+    },
+    {
+        "id": "6",
+        "name": "Action RPG"
+    },
+    {
+        "id": "7",
+        "name": "Plate-Forme"
+    },
+    {
+        "id": "8",
+        "name": "Aventure"
+    },
+    {
+        "id": "9",
+        "name": "Réflexion"
+    },
+    {
+        "id": "10",
+        "name": "Infiltration"
+    },
+    {
+        "id": "11",
+        "name": "Rythme"
+    },
+    {
+        "id": "12",
+        "name": "FPS"
+    },
+    {
+        "id": "13",
+        "name": "Shooter"
+    },
+    {
+        "id": "14",
+        "name": "Création"
+    },
+    {
+        "id": "15",
+        "name": "Open World"
+    },
+    {
+        "id": "16",
+        "name": "Sandbox"
+    },
+    {
+        "id": "17",
+        "name": "Autres"
+    }
+]

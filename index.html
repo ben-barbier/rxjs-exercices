@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/bulma/0.4.2/bulma.css">
+    <script src="resources/rxjs/5.4.0/Rx.js"></script>
+    <script>
+        this.http = {
+            get: function (url) {
+                return Rx.Observable
+                    .fromPromise(fetch(url))
+                    .map(e => Rx.Observable.fromPromise(e.text()))
+                    .flatMap(e => e)
+                    .map(e => {
+                        return {
+                            json: () => {
+                                return JSON.parse(e);
+                            }
+                        };
+                    });
+            }
+        }
+    </script>
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">RxJs</h1>
+            <h2 class="subtitle">Exercices</h2>
+        </div>
+
+        <article class="message is-info">
+            <div class="message-body content">
+                Liste des ressources accessible :
+                <ul>
+                    <li><a href="http://localhost:8082/videogames" target="_blank">Video Games(http://localhost:8082/videogames)</a></li>
+                    <li><a href="http://localhost:8082/consoles" target="_blank">Consoles(http://localhost:8082/consoles)</a></li>
+                    <li><a href="http://localhost:8082/genres" target="_blank">Genres(http://localhost:8082/genres)</a></li>
+                </ul>
+            </div>
+        </article>
+
+        <h3 class="title is-4">Ex 1</h3>
+        Afficher le nom du jeu avec l'id "1"
+        <strong>en utilisant au mieux l'API</strong>.
+        <pre class="box" id="ex1"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            this.http.get('http://localhost:8082/videogames/1')
+                .map(response => response.json())
+                .map(videogame => videogame.name)
+                .subscribe(videogameName => {
+                    document.getElementById("ex1").innerHTML = videogameName;
+                });
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 2</h3>
+        Afficher le nom du jeu avec l'id "1"
+        <strong>en partant de la liste des jeux</strong>.
+        <pre class="box" id="ex2"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 3</h3>
+        Afficher le nombre total de couple jeu / console.
+        <pre class="box" id="ex3"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 4</h3>
+        Afficher le nom des jeux sur "PS Vita" en cherchant <strong>d'abord</strong>
+        l'identifiant de la PS Vita <strong>puis</strong> la liste des jeux
+        avant d'éffectuer le filtre.
+        <pre class="box" id="ex4"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 5</h3>
+        Afficher le nom des jeux sur "PS Vita" en cherchant <strong>simultanément</strong>
+        l'identifiant de la PS Vita et la liste des jeux
+        avant d'éffectuer le filtre.
+        <pre class="box" id="ex5"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 6</h3>
+        Afficher le nom des consoles du jeu avec l'id "15"
+        <strong>sans charger la liste complète des consoles</strong>.
+        <pre class="box" id="ex6"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+        <hr/><!-- ------------------------------------------------------------------------------------------------- -->
+
+        <h3 class="title is-4">Ex 7</h3>
+        Afficher le nom des genres des jeux avec les id "1", "2", "3" et "4"
+        <strong>sans charger la liste complète des jeux ni sans charger la liste complète des genres</strong>.
+        <pre class="box" id="ex7"><img src="resources/spinner/spinner.gif"/></pre>
+        <script>
+            //TODO...
+        </script>
+
+    </div>
+</section>
+</body>
+</html>

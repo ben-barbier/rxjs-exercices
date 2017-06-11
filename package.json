@@ -1,0 +1,16 @@
+{
+    "name": "videogames-api",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start-api": "nodemon api/server.js",
+        "start-statics": "http-server -p 8081"
+    },
+    "dependencies": {
+        "hapi": "16.4.1"
+    },
+    "devDependencies": {
+        "http-server": "^0.10.0",
+        "nodemon": "1.11.0"
+    }
+}

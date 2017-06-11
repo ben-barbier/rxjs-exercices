@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "PS4"
+    },
+    {
+        "id": "3",
+        "name": "Nintendo Switch"
+    },
+    {
+        "id": "2",
+        "name": "Xbox One"
+    },
+    {
+        "id": "4",
+        "name": "Wii U"
+    },
+    {
+        "id": "5",
+        "name": "PC"
+    },
+    {
+        "id": "6",
+        "name": "Mac"
+    },
+    {
+        "id": "7",
+        "name": "Linux"
+    },
+    {
+        "id": "8",
+        "name": "PS Vita"
+    },
+    {
+        "id": "9",
+        "name": "PS3"
+    }
+]
